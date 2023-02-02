@@ -1,0 +1,289 @@
+<div >
+   
+  <img src="/assets/Img/logo-localib.png" alt="logo Localib">
+  
+    </div>  
+
+
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <h1 style="color: aliceblue;">Gestion des Locations</h1>
+      <div class="d-flex">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Ajouter Client</button>
+        
+
+      </div>
+    </div>
+  </nav>
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30 text-center">
+    <h2> Vehicules non disponible</h2>
+  </div>
+
+  <table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col"> Modele</th>
+            <th scope="col">Marque</th>
+            <th scope="col">Immatriculation</th>
+            <th scope="col">Année</th>
+            <th scope="col">Moteur</th>
+            <th scope="col">Prix/Jour</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Citadine</td>
+            <td>Mercedes</td>
+            <td>765-953</td>
+            <td>2022</td>
+            <td>Diesel</td>
+            <td>125 $</td>
+           
+            <td>
+                <button class="btn btn-info">Editer</button>
+                <button class="btn btn-danger mx3 ">Supprimer</button>
+            </td>
+        </tr>
+    </tbody>
+
+    <tbody>
+        <tr>
+            <td>Utilitaire</td>
+            <td>Renault</td>
+            <td>965-953</td>
+            <td>2008</td>
+            <td>Diesel</td>
+            <td>100 $</td>
+           
+            <td>
+                <button class="btn btn-info">Editer</button>
+                <button class="btn btn-danger mx3 ">Supprimer</button>
+            </td>
+        </tr>
+    </tbody>
+
+
+    <tbody>
+        <tr>
+            <td>Citadine</td>
+            <td>Bmw</td>
+            <td>765-453</td>
+            <td>2018</td>
+            <td>Diesel</td>
+            <td>225 $</td>
+           
+            <td>
+                <button class="btn btn-info">Editer</button>
+                <button class="btn btn-danger mx3 ">Supprimer</button>
+            </td>
+        </tr>
+    </tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+  </table>
+
+
+  
+
+
+  <!-- Trigger the modal with a button -->
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Ajouter Client</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+        <form [formGroup]="formValue">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nom</label>
+              <input type="nom" formControlName="nom" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Prenom</label>
+              <input type="prenom" formControlName="prenom" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Email</label>
+                <input type="prenom"formControlName="email" class="form-control" id="exampleInputPassword1">
+              </div>
+           
+              
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Numero De Locataire</label>
+                <input type="prenom" formControlName="numerolocataire" class="form-control" id="exampleInputPassword1">
+              </div>
+           
+              
+
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Telephone</label>
+                <input type="prenom" formControlName="telephone" class="form-control" id="exampleInputPassword1">
+              </div>
+             
+
+
+
+
+
+
+           
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ajouter</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="content">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30 text-center">
+          <h2> Vehicules Disponible</h2>
+        </div>
+      </div>
+      <div class="row">
+  
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30">
+          <div class="tour-booking-form">
+            <form>
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                  <h4 class="tour-form-title">Quels vehicules ?</h4>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <div class="form-group">
+                    
+                    <div class="select">
+                      <select id="select" name="select" class="form-control">
+                        
+                        <option value="">Charette RS6</option>
+                        <option value="">Peugeot Turbo Moteur</option>
+                        <option value="">Peugeot la vie en bleu</option>
+                        <option value="">Renault Puissance Rouge</option>
+                        <option value="">Batmobile</option>
+                        <option value="">Voiture volante</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <div class="form-group">
+                    <label class="control-label" for="datepicker">Date debut de location</label>
+                    <div class="input-group">
+                      <input id="datepicker" name="datepicker" type="text" placeholder="Date" class="form-control"
+                        required>
+                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+                    <input type="date">
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label class="control-label" for="datepicker">Date Fin de location</label>
+                    <div class="input-group">
+                      <input id="datepicker" name="datepicker" type="text" placeholder="Date" class="form-control"
+                        required>
+                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+                    <input type="date">
+                  </div>
+
+
+
+
+
+
+
+
+
+                </div>
+               
+          
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt30">
+                  <h4 class="tour-form-title">Identité</h4>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <div class="form-group">
+                    <label class="control-label" for="name">Nom complet</label>
+                    <input id="name" type="text" placeholder="Nom complet" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <div class="form-group">
+                    <label class="control-label" for="email"> Email</label>
+                    <input id="email" type="text" placeholder="xxxx@xxxx.xxx" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                  <div class="form-group">
+                    <label class="control-label" for="phone"> Telephone</label>
+                    <input id="phone" type="text" placeholder="(222) 222-2222" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                  <div class="form-group">
+                    <label class="control-label" for="country">Pays</label>
+                    <input id="country" type="text" placeholder="France" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                  <div class="form-group">
+                    <label class="control-label" for="city">Ville</label>
+                    <input id="city" type="text" placeholder="Lille" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div class="form-group">
+                    <label class="control-label" for="textarea">Des particularité ?</label>
+                    <textarea class="form-control" id="textarea" name="textarea" rows="4"
+                      placeholder="Dites nous tout"></textarea>
+                  </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <button type="submit" name="singlebutton" class="btn btn-primary">Louer</button>
+                </div>
+              </div>
+            </form>
+          </div>
+  
+        </div>
+      </div>
+      <div class="row">
+  
+      </div>
+    </div>
+  
+
+
+
+

@@ -1,0 +1,12 @@
+div{
+    display: contents;
+    align-content: stretch;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.card-img-top {
+    height: auto;
+    max-width: 10%;
+}

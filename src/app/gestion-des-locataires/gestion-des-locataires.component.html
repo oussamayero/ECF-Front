@@ -1,0 +1,227 @@
+
+  
+  <div >
+   
+<img src="/assets/Img/logo-localib.png" alt="logo Localib">
+
+  </div>  
+
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Gestion des Locataires</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="Trouver un locataire" placeholder="Recherche rapide  " aria-label="Search">
+        <button class="btn btn-primary" type="submit">Recherche</button>
+      </form>
+    </div>
+  </nav>
+
+
+
+  
+
+
+
+<table class="table mt-3">
+  <thead>
+      <tr>
+          <th scope="col"> Nom</th>
+          <th scope="col">Prenom</th>
+          <th scope="col">Numero de locataire</th>
+          <th scope="col">Email</th>
+          <th scope="col">Telephone</th>  
+      </tr>
+
+  </thead>
+
+  <tbody>
+    <tr>
+        <td>Yero</td>
+        <td>Oussama</td>
+        <td>765-953</td>
+        <td>oussamayero@gmail.com</td>
+        <td>0782530871</td>
+
+          
+              
+        <ul *ngFor="let item of list">
+          <li>{{item.nom}} </li>
+          <li>{{item.prenom}}</li>
+          <li>{{item.email}}</li>
+          <li>{{item.telephone}}</li>
+          <li><button (click)="removeTasks(item.id)" >Supprimer</button>  </li>
+          </ul>
+        
+       
+        <td>
+          
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ajouter Client</button>
+
+            <div class="form-group">
+              <div class="col-md-offset-3 col-md-9">
+                  <br>
+              <input (click)="addTasks()" class="btn btn-primary" value="Valider Inscription" />
+        
+        
+              
+        <ul *ngFor="let item of list">
+        <li>{{item.nom}} </li>
+        <li>{{item.prenom}}</li>
+        <li>{{item.email}}</li>
+        <li>{{item.telephone}}</li>
+        <li><button (click)="removeTasks(item.id)" >Supprimer</button>  </li>
+        </ul>
+        <br>
+              </div>
+              </div>
+        </td>
+    </tr>
+</tbody>
+
+
+
+   
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Ajouter Client</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+        <form [formGroup]="form">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nom</label>
+              <input type="nom" formControlName="nom" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Prenom</label>
+              <input type="prenom" formControlName="prenom" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Email</label>
+                <input type="prenom"formControlName="email" class="form-control" id="exampleInputPassword1">
+              </div>
+           
+              
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Numero De Locataire</label>
+                <input type="prenom" formControlName="numerolocataire" class="form-control" id="exampleInputPassword1">
+              </div>
+           
+              
+
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Telephone</label>
+                <input type="prenom" formControlName="telephone" class="form-control" id="exampleInputPassword1">
+
+
+
+
+
+
+
+                
+
+        <div class="form-group">
+        <div class="col-md-offset-3 col-md-9">
+            <br>
+        <input (click)="addTasks()" class="btn btn-primary" value="Valider Inscription" />
+
+
+        
+<ul *ngFor="let item of list">
+  <li>{{item.nom}} </li>
+  <li>{{item.prenom}}</li>
+  <li>{{item.email}}</li>
+  <li>{{item.telephone}}</li>
+  <li><button (click)="removeTasks(item.id)" >Supprimer</button>  </li>
+</ul>
+
+        </div>
+        </div>
+              </div>
+            
+           
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ajouter</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <br>
+  
+  <div class="card">
+    <a class="navbar-brand">Inscription de nouveau locataire</a>
+    <div class="card-body">
+      
+      
+      <div ng-app="sample">
+        <form class="form-horizontal" name="registerForm" [formGroup]="form">
+        <div class="form-group">
+        <label class="col-md-3 control-label" for="Nom">Nom</label>
+        <div class="col-md-4">
+        <input type="text" placeholder="nom du client" formControlName="nom"/>
+        
+        </div>
+        </div>
+        <div class="form-group">
+        <label class="col-md-3 control-label" for="Prenom">Prenom</label>
+        <div class="col-md-4">
+        <input  type="prenom" placeholder="Prenom" formControlName="prenom" />
+
+        </div> 
+        </div>
+        <div class="form-group">
+        <label class="col-md-3 control-label" for="Email">Email</label>
+        <div class="col-md-4">
+        <input  type="email" placeholder="email" formControlName="email" />
+        </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-3 control-label" for="Telephone">Telephone</label>
+            <div class="col-md-4">
+            <input  type="Telephone"placeholder ="Telephone" formControlName="telephone"  />
+            </div>
+            </div>
+
+
+
+
+        <div class="form-group">
+        <div class="col-md-offset-3 col-md-9">
+            <br>
+        <input (click)="addTasks()" class="btn btn-primary" value="Valider Inscription" />
+
+
+        
+<ul *ngFor="let item of list">
+  <li>{{item.nom}} </li>
+  <li>{{item.prenom}}</li>
+  <li>{{item.email}}</li>
+  <li>{{item.telephone}}</li>
+  <li><button (click)="removeTasks(item.id)" >Supprimer</button>  </li>
+</ul>
+
+
+
+        </div>
+        </div>
+        </form>
+     </div>
+
+
+    </div>
